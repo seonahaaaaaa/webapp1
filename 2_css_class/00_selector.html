@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 연습</title>
+<style type="text/css">
+
+	/*  가중치가 높은 순으로 스타일 지정 됨. (동등 할 경우 나중에 선언 된 컬러로 덮어 씌워짐)
+		id 		: 100
+		class 	: 10
+		element : 1
+	*/
+	
+/*	div.point10 {color:#FFAA33}	 class
+	div#point100 {color:cyan;}	 id
+*/	
+	body div {color:green;} 	element /* body +1 div +1 총 2점으로 가중치가 동등하지 않아 red 컬러로 덮어 씌워지지 않음. */
+	div {color:red;}			element 
+	
+	/* input[type = 'text'] {border : 1px solid pink;} */
+	/****************************** CSS index는 1부터 시작*/
+	/* radio , checkbox 는 스타일 적용되지 않음 */
+	input:nth-child(5) {border: 3px dashed red;}
+	input:nth-last-child(2) {border : 3px dashed black;}
+	input:first-child {border: 1px solid pink;}
+	input:last-child {border: 1px dotted blue;}
+	
+
+</style>
+</head>
+<body>
+	
+	<div id="point100" class="point10">안녕하세요</div>
+	
+	
+	<p>
+		<input type="text" value="입력1">
+		<input type="checkbox"> 선택
+		<input type="radio" name="rd"  checked="checked"> 예
+		<input type="radio" name="rd"> 아니오
+		<input type="text" value="입력2" disabled="disabled">		
+		<input type="button" value="확인">
+		<input type="button" value="취소">
+	</p>
+	
+	
+</body>
+</html>
